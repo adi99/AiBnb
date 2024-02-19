@@ -37,6 +37,9 @@ const Rentals = () => {
     pricePerDay: 0,
   });
 
+  const convertIpfsUrl = (ipfsUrl) => {
+    return ipfsUrl.replace('ipfs://', 'https://ipfs.io/ipfs/');
+  };
   const getImage = async (e) => {
     e.preventDefault();
     const file = e.target.files[0];
@@ -46,7 +49,7 @@ const Rentals = () => {
   };
 
   const addRental = async () => {
-    if (data.network == networksMap[networkDeployedTo]) {
+    if (data.network === networksMap[networkDeployedTo]) {
       if (image !== undefined && window.ethereum !== undefined) {
         try {
           setLoading(true);
@@ -64,7 +67,9 @@ const Rentals = () => {
           const listingFee = AirbnbContract.callStatic.listingFee();
 
           const cid = await StoreContent(image);
-          const imageURI = `ipfs://${cid}/${imageName}`;
+          const webAccessibleUrl = convertIpfsUrl(cid.data.image.href);
+          const imageURI = webAccessibleUrl;
+          console.log(imageURI)
 
           const add_tx = await AirbnbContract.addRental(
             formInput.name,
@@ -110,7 +115,19 @@ const Rentals = () => {
           <Connect />
         </div>
       </div>
-
+      <div className="page-layout d-flex">
+    <div className="sidebar">
+  <nav>
+    <ul>
+ 
+      <li><Link to="/rentals" className="sidebar-btn">Rentals</Link></li>
+      <li><Link to="/dashboard" className="sidebar-btn">Dashboard</Link></li>
+      <li><Link to="/marketplace" className="sidebar-btn">Marketplace</Link></li>
+      <li><Link to="/social" className="sidebar-btn">Social</Link></li>
+      <li><Link to="/mybooking" className="sidebar-btn">My Booking</Link></li>
+    </ul>
+  </nav>
+</div>
       <hr className="line" />
       <br />
       <br />
@@ -243,6 +260,7 @@ const Rentals = () => {
         <div className="addRentalContent-image">
           <img src={bg} className="add-img" alt="logo"></img>
         </div>
+      </div>
       </div>
     </>
   );

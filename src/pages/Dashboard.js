@@ -27,15 +27,11 @@ const Dashboard = () => {
 
     const rentals = await AirbnbContract.getRentals();
 
-    const user_properties = rentals.filter((r) => r[1] == data.account);
+    const user_properties = rentals.filter((r) => r[1] === data.account);
 
     const items = await Promise.all(
       user_properties.map(async (r) => {
-        const imgUrl = r[7].replace(
-          "ipfs://",
-          "https://gateway.pinata.cloud/ipfs/"
-        );
-
+        const imgUrl = r[7];
         return {
           name: r[2],
           city: r[3],
@@ -46,6 +42,7 @@ const Dashboard = () => {
       })
     );
     setPropertiesList(items);
+    console.log(items)
 
     const myRentals = [];
     await Promise.all(
@@ -53,13 +50,9 @@ const Dashboard = () => {
         let _rentalBookings = await AirbnbContract.getRentalBookings(
           Number(r[0])
         );
+        const imgUrl = r[7];
 
-        const imgUrl = r[7].replace(
-          "ipfs://",
-          "https://gateway.pinata.cloud/ipfs/"
-        );
-
-        let myBookings = _rentalBookings.filter((b) => b[0] == data.account);
+        let myBookings = _rentalBookings.filter((b) => b[0] === data.account);
         if (myBookings.length !== 0) {
           const latestBook = myBookings[0];
           const item = {
@@ -94,6 +87,18 @@ const Dashboard = () => {
           <Connect />
         </div>
       </div>
+      <div className="page-layout d-flex">
+    <div className="sidebar">
+  <nav>
+    <ul>
+      <li><Link to="/rentals" className="sidebar-btn">Rentals</Link></li>
+      <li><Link to="/add-rental" className="sidebar-btn">Add Rental</Link></li>
+      <li><Link to="/marketplace" className="sidebar-btn">Marketplace</Link></li>
+      <li><Link to="/social" className="sidebar-btn">Social</Link></li>
+      <li><Link to="/mybooking" className="sidebar-btn">My Booking</Link></li>
+    </ul>
+  </nav>
+</div>
 
       <hr className="line" />
       <div className="rentalsContent">
@@ -168,6 +173,7 @@ const Dashboard = () => {
             </div>
           )}
         </div>
+      </div>
       </div>
     </>
   );

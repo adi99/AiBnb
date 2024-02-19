@@ -1,8 +1,8 @@
 .search-reminder {
-  width: 400px;
+  width: 600px;
   border: 1.5px solid rgb(242, 242, 242);
   border-radius: 100px;
-  height: 45px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;

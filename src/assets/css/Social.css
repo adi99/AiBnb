@@ -1,0 +1,88 @@
+/* General container and alignment */
+.container-fluid {
+    padding: 0 2rem; /* Adjust padding for the container */
+  }
+  
+  /* Styling for the form and its elements */
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Select file';
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+  
+  /* Style adjustments for custom file label */
+  .custom-file-label {
+    overflow: hidden;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  /* Card and image list styling */
+  .card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 20px;
+  }
+  
+  /* Image styling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Tip button styling */
+  .btn-link {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container-fluid {
+      padding: 0 1rem;
+    }
+  
+    main {
+      padding-top: 20px;
+    }
+  }
+  

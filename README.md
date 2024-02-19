@@ -1,9 +1,9 @@
 <div id="top"></div>
 
 <!-- ABOUT THE PROJECT -->
-## Decentral AirBnb
+## Decentral AiBnb
 
-This is a decentralized web3.0 version of the AirBnb renting website built for EVM compatible blockchains (Ethereum, Polygon,...), it was inspired by the Moralis project ["Build Web 3.0 AirBNB Clone Using web3uikit, React, Moralis and Solidity - Full-Stack Blockchain App"](https://www.youtube.com/watch?v=rj-Mb-xz1Os&t=2443s)
+AIbnb is a decentralized application designed to revolutionize the way individuals plan vacations and manage property bookings. Built on blockchain technology, it features an AI-based vacation planner, an Airbnb-like booking portal, property upload capabilities, and a unique booking system where transactions generate NFTs. Property owners have the flexibility to list bookings on the marketplace for various reasons, such as cancellation plans. The dashboard provides a comprehensive view of listed properties and bookings made.
  <p align="center">
   <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/204110853-5fa8dfe6-ea55-4eff-b818-4e69859beb5f.png" width="100%">
 </p>
@@ -52,6 +52,7 @@ This is a decentralized web3.0 version of the AirBnb renting website built for E
 
 Please install or have installed the following:
 * [nodejs](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/)
+* [ParticleAuth](https://particle.network/)
 * [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) Chrome extension installed in your browser
 * [Ganache](https://trufflesuite.com/ganache/) for local smart contracts deployement and testing
 
@@ -65,36 +66,6 @@ This a full stack web3 decentralized application built using Hardhat/React js, s
 The code for the UI can be found in the src folder (as in all reactjs apps)
 </ul>
 
-### Initial Setup
-1. Clone the repository and install all the required packages by running:
-   ```sh
-   git clone https://github.com/kaymen99/DecentralAirbnb.git
-   cd DecentralAirbnb
-   yarn
-   ```
-2. Start the ganache network and export the private key of the first account to the .env file in the hardhat folder, it will be used as admin for deploying the Airbnb contract:
-   ```sh
-   ETHERSCAN_API_KEY="your etherscan api key"
-   POLYGON_RPC_URL="Your polygon RPC url from alchemy or infura"
-   MUMBAI_RPC_URL="Your mumbai RPC url from alchemy or infura"
-   PRIVATE_KEY="ganahce-private-key"
-   ```
-   
-   * <b>Note :</b> I used the ganache network just for testing, if you want to deploy directly to a real/test network you'll need to add your real private key in the .env file.
-   
-3. As infura recently removed its free IPFS gateway i used `web3.storage` api for storing rentals images into IPFS, this api is as simple as infura it requires the creation of a free account and a new api token which you can do [here](https://web3.storage), when you finish add your api token into the `src/utils/StoreContent.js` file:
-   ```js
-    const web3storage_key = "YOUR-WEB3.STORAGE-API-TOKEN";
-   ```
-   
-4. Get the Google maps api-key (it's free) [here](https://developers.google.com/maps/documentation/embed/get-api-key) and add it to the src/component/RentalsMap.js file:
-   ```sh
-    export default GoogleApiWrapper({
-          apiKey: "api_key",
-    })(RentalsMap);
-   ```
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- Working EXAMPLES -->
 ## How it Works
 
@@ -104,9 +75,12 @@ The dapp is built around the DecentralAirbnb.sol contract, which contains all th
 
 <h4>Core functions:</h4>
 <ul>
-  <li><b>addRental:</b> allow any user to add it's property on the rentals listing by paying a small fee</li>
-  <li><b>bookDates:</b> given the vacation start and end dates, it book a reservation if the rantal is available</li>
-  <li><b>chackIfBooked:</b> verify if a given rental is booked for the user dates</li>
+  <li><b>AIVocationPlanner:</b> Utilizes AI to recommend personalized vacation plans.</li>
+  <li><b>Booking Portal:</b> An intuitive platform for users to book accommodations.</li>
+  <li><b>Property Upload:</b> Enables property owners to list their spaces easily.</li>
+  <li><b>MyBooking Page:</b> Displays travel bookings as NFT and option to list them on Marketplace.</li>
+  <li><b>Marketplace:</b> Allows owners to list their bookings for sale or trade.</li>
+  <li><b>Dashboard:</b> Provides a centralized view of owned and booked properties.</li>
 </ul>
 
 <h4>Admin functions: (admin is the only one that can call this functions)</h4>
@@ -114,7 +88,7 @@ The dapp is built around the DecentralAirbnb.sol contract, which contains all th
   <li><b>changeListingFee:</b> change the fee charged when adding new rental</li>
   <li><b>withdrawBalance:</b> the admin is able to withdraw th contract balance which is accumulated from the charged listing fee</li>
 </ul>
-<h4>ChainLink price feed:</h4>
+<h4>ChainLink price feed:</h4>This project was started with Chainlink Goerli's Price Feed. Chainlink does not have a public price feed for Avalanche Fuji Network.
 
 As ETH or MATIC are both volatile currencies, the user need to set the renting price in $ and this price is converted using chainlink price feeds when a user is excuting the booking transaction.
 
@@ -140,49 +114,4 @@ requirements, and also shows the location of these on a map provided by Google-m
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-<!-- USAGE EXAMPLES -->
-## How to Use
-
-After going through all the installation and setup steps, you'll need to deploy the smart contract to the ganache network by running: 
-   ```sh
-   cd hardhat
-   npx hardhat run scripts/deploy-airbnb.js --network ganache
-   ```
-This will create a config.js file and an artifacts folder and transfer them to the src folder to enable the interaction between the contract and the UI
-
-If you want to test the functionnalities of the DecentralAirbnb contract you can do it by running:
-   ```sh
-   npx hardhat test
-   ```
-To start the app you have to go back to the DecentralAirbnb folder and run the command:
-   ```sh
-   yarn start
-   ```
-   
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- FUTURE DEVELOPEMENT -->
-## Future developements
-
-* Currently the only way to get the listed rantals is through getRentalList function, which is really inconvenient if a user want to filter rentals by owner, number of guests or price. So it's better to <b>create a subgraph API based on the emitted events</b> thus allowing quick access to the differnet requests.
-
-* Perfom contracts audit using known tools such as echidna & slither.
-   
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- Contact -->
-## Contact
-
-If you have any question or problem running this project just contact me: aymenMir1001@gmail.com
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 

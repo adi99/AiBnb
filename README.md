@@ -5,7 +5,7 @@
 
 AIbnb is a decentralized application designed to revolutionize the way individuals plan vacations and manage property bookings. Built on blockchain technology, it features an AI-based vacation planner, an Airbnb-like booking portal, property upload capabilities, and a unique booking system where transactions generate NFTs. Property owners have the flexibility to list bookings on the marketplace for various reasons, such as cancellation plans. The dashboard provides a comprehensive view of listed properties and bookings made.
  <p align="center">
-  <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/204110853-5fa8dfe6-ea55-4eff-b818-4e69859beb5f.png" width="100%">
+  <img alt="Dark" src="https://github.com/adi99/AiBnb/blob/main/AIVocation.jpg" width="100%">
 </p>
 
  

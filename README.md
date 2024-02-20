@@ -7,27 +7,6 @@ AIbnb is a decentralized application designed to revolutionize the way individua
  <p align="center">
   <img alt="Dark" src="https://github.com/adi99/AiBnb/blob/main/AIVocation.jpg" width="100%">
 </p>
-<!-- GETTING STARTED -->
-## Getting Started
-
-### Prerequisites
-
-Please install or have installed the following:
-* [nodejs](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/)
-* [ParticleAuth](https://particle.network/)
-* [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) Chrome extension installed in your browser
-* [Ganache](https://trufflesuite.com/ganache/) for local smart contracts deployement and testing
-
-### Project structure
-
-This a full stack web3 decentralized application built using Hardhat/React js, so the project is devided into 2 main parts:
-<ul>
- <li><b>Smart contract/backend side:</b></li>
- Located in the hardhat folder, it contains the blockchain developement envirenment built using Hardhat, with all the smart contracts tests, deployement scripts and the plugins used (chainlink). 
-  <li><b>front-end side:</b></li>
-The code for the UI can be found in the src folder (as in all reactjs apps)
-</ul>
-
 <!-- Working EXAMPLES -->
 ## How it Works
 

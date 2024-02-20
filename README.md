@@ -43,7 +43,7 @@ The app allows users to rent any place in the world and pay in crypto, it's stru
 * The Rentals page is where the user is entering the accomodation information, it contains a list of all the properties that match the user 
 requirements, and also shows the location of these on a map provided by Google-maps
 
-![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/rentals.png)
+![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/rentals.jpg)
 
 * Each user has their own Dashboard, it can be accessed by clicking on the account button in the top of the page, this dashboard shows all the user properites listed for renting and the reservations he has booked.
 
@@ -51,7 +51,7 @@ requirements, and also shows the location of these on a map provided by Google-m
 
 * In the Dashboard page there is a button "Add rental", which redirect the user to the AddRental page where he can list a new rental by providing a set of metadata (property name, city, latitude, longitude, description, maximum number of guests, rent price per day in $), note that it's really important to give the exact property (latitude, longitude) as they are later used to show the location on the Google map
 
-![Capture d’écran 2022-05-12 à 23 15 13](https://user-images.githubusercontent.com/83681204/168187290-846d2123-3bb0-49fb-90b1-74a96fec1b88.png)
+![Capture d’écran 2022-05-12 à 23 15 13](https://github.com/adi99/AiBnb/blob/main/Add-Rental.jpg)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

@@ -19,7 +19,7 @@ The dapp is built around the DecentralAirbnb.sol, NFT.sol, Marketplace.sol, Dece
 
 <h4>Core functions:</h4>
 <ul>
-  <li><b>AIVocationPlanner:</b> Utilizes AI to recommend personalized vacation plans.</li>
+  <li><b>AIVocationPlanner:</b> Utilizes OpenAI api to recommend personalized vacation plans.</li>
   <li><b>Booking Portal:</b> An intuitive platform for users to book accommodations.</li>
   <li><b>Property Upload:</b> Enables property owners to list their spaces easily.</li>
   <li><b>MyBooking Page:</b> Displays travel bookings as NFT and option to list them on Marketplace.</li>

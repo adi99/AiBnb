@@ -7,44 +7,6 @@ AIbnb is a decentralized application designed to revolutionize the way individua
  <p align="center">
   <img alt="Dark" src="https://github.com/adi99/AiBnb/blob/main/AIVocation.jpg" width="100%">
 </p>
-
- 
-### Built With
-
-* [Solidity](https://docs.soliditylang.org/)
-* [Hardhat](https://hardhat.org/getting-started/)
-* [React.js](https://reactjs.org/)
-* [ethers.js](https://docs.ethers.io/v5/)
-* [web3modal](https://github.com/Web3Modal/web3modal)
-* [material ui](https://mui.com/getting-started/installation/)
-
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-       <li><a href="#prerequisites">Prerequisites</a></li>
-       <li><a href="#project-structure">Project structure</a></li>
-       <li><a href="#initial-setup">Initial Setup</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#how-it-works">How it Works</a>
-     <ul>
-       <li><a href="#contracts">Contracts</a></li>
-       <li><a href="#user-interface">User interface</a></li>
-      </ul>
-    </li>
-    <li><a href="#how-to-use">How to Use</a></li>
-    <li><a href="#future-developements">Future developements</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 

@@ -11,8 +11,11 @@ AIbnb is a decentralized application designed to revolutionize the way individua
 ## How it Works
 
 ### contracts
+ <p align="center">
+  <img alt="Dark" src="https://github.com/adi99/AiBnb/blob/main/Particle-auth.jpg" width="100%">
+</p>
+The dapp is built around the DecentralAirbnb.sol, NFT.sol, Marketplace.sol, Decentragram.sol contract and Particle Auth as wallet, which contains all the app logic and has the following features:
 
-The dapp is built around the DecentralAirbnb.sol contract, which contains all the app logic and has the following features:
 
 <h4>Core functions:</h4>
 <ul>

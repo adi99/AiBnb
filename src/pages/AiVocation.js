@@ -17,7 +17,8 @@ const App = () => {
   const [imageBase64, setImageBase64] = useState('');
 
     const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+    apiKey: "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	",
+      dangerouslyAllowBrowser: true,
  });
 
   const fetchBotReply = async (outline) => {

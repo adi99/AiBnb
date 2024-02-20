@@ -43,7 +43,7 @@ The app allows users to rent any place in the world and pay in crypto, it's stru
 * The Rentals page is where the user is entering the accomodation information, it contains a list of all the properties that match the user 
 requirements, and also shows the location of these on a map provided by Google-maps
 
-![Capture d’écran 2022-05-12 à 23 16 45](https://user-images.githubusercontent.com/83681204/168185991-4dfd9476-e905-4ae0-bf85-cc84397db436.png)
+![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/rentals.png)
 
 * Each user has their own Dashboard, it can be accessed by clicking on the account button in the top of the page, this dashboard shows all the user properites listed for renting and the reservations he has booked.
 

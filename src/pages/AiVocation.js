@@ -17,7 +17,7 @@ const App = () => {
   const [imageBase64, setImageBase64] = useState('');
   
   const openai = new OpenAI({
-    apiKey: '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',
+    apiKey: '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',
     dangerouslyAllowBrowser: true,
   });
 

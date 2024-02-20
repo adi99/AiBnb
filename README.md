@@ -20,7 +20,8 @@ The dapp is built around the DecentralAirbnb.sol contract, which contains all th
   <li><b>Booking Portal:</b> An intuitive platform for users to book accommodations.</li>
   <li><b>Property Upload:</b> Enables property owners to list their spaces easily.</li>
   <li><b>MyBooking Page:</b> Displays travel bookings as NFT and option to list them on Marketplace.</li>
-  <li><b>Marketplace:</b> Allows owners to list their bookings for sale or trade.</li>
+  <li><b>Marketplace:</b> Allows owners to list their bookings(as NFT) for sale or trade.</li>
+  <li><b>Social:</b> Allows People to share pictures and comment on them</li>
   <li><b>Dashboard:</b> Provides a centralized view of owned and booked properties.</li>
 </ul>
 
@@ -31,15 +32,12 @@ The dapp is built around the DecentralAirbnb.sol contract, which contains all th
 </ul>
 <h4>ChainLink price feed:</h4>This project was started with Chainlink Goerli's Price Feed. Chainlink does not have a public price feed for Avalanche Fuji Network.
 
-As ETH or MATIC are both volatile currencies, the user need to set the renting price in $ and this price is converted using chainlink price feeds when a user is excuting the booking transaction.
-
-
 ### User interface
 The app allows users to rent any place in the world and pay in crypto, it's structured in 4 pages:
 
-* The home page is the landing page of the app, By entering the city, the duration of the holiday and the number of guest the user is able to check all the available properties and can compare their prices, and the different facilities.
-
-* The Rentals page is where the user is redirected after entering the holiday information, it contains a list of all the properties that match the user 
+* The home page is the landing page of the app, It is based on OpenAI api used to plan presonalized travels, intinerary and suggestion for Vocation
+  ![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/AIVocation.jpg)
+* The Rentals page is where the user is entering the accomodation information, it contains a list of all the properties that match the user 
 requirements, and also shows the location of these on a map provided by Google-maps
 
 ![Capture d’écran 2022-05-12 à 23 16 45](https://user-images.githubusercontent.com/83681204/168185991-4dfd9476-e905-4ae0-bf85-cc84397db436.png)

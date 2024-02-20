@@ -15,9 +15,9 @@ const App = () => {
   const [synopsis, setSynopsis] = useState('');
   const [itinerary, setItinerary] = useState('');
   const [imageBase64, setImageBase64] = useState('');
-  
+
   const openai = new OpenAI({
-    apiKey: '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',
+    apiKey: process.env.OPENAI_API_KEY,
     dangerouslyAllowBrowser: true,
   });
 

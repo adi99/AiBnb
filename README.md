@@ -40,10 +40,23 @@ The app allows users to rent any place in the world and pay in crypto, it's stru
 
 * The home page is the landing page of the app, It is based on OpenAI api used to plan presonalized travels, intinerary and suggestion for Vocation
   ![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/AIVocation.jpg)
+  
 * The Rentals page is where the user is entering the accomodation information, it contains a list of all the properties that match the user 
 requirements, and also shows the location of these on a map provided by Google-maps
 
 ![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/rentals.jpg)
+
+* The Mybooking page made to display your booked accomodation as NFTs. Every time User books accomodation from Rentals page it is then minted into user's wallet. It has feature of listing the NFT (real world accomodation) on Marketplace if plan is cancelled or any other reason.
+
+![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/Mybooking.jpg)
+  
+* The Marketplace page shows the NFTs (real world accommodation) which anybody can buys and become owner of real world accommodation, using NFTs. Later We will add more real world assets to sell on this Marketplace.
+
+![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/Marketplace.jpg)
+  
+* The Social Page let Users showcase their Travels to world and people can Comment on that. User will upload any Image and it will be uploaded to ipfs using NFT.storage.
+
+  ![Capture d’écran 2022-05-12 à 23 16 45](https://github.com/adi99/AiBnb/blob/main/Social.jpg)
 
 * Each user has their own Dashboard, it can be accessed by clicking on the account button in the top of the page, this dashboard shows all the user properites listed for renting and the reservations he has booked.
 

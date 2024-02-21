@@ -76,6 +76,8 @@ In the project directory, you can run:
 
 Install the dependencies
 
+'OpenAI API key ' inside env.js which is reside in src folder
+
 ### `npm start`
 
 Runs the app in the development mode.\

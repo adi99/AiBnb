@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { OpenAI } from 'openai';
+import { process } from '../env';
 import "../assets/css/Vocation.css";
 import main from "../assets/images/movieboss.png";
 import sendb from "../assets/images/send-btn-icon.png";
@@ -17,8 +18,8 @@ const App = () => {
   const [imageBase64, setImageBase64] = useState('');
 
     const openai = new OpenAI({
-    apiKey: "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	",
-      dangerouslyAllowBrowser: true,
+    apiKey: process.env.OPENAI_API_KEY,
+    dangerouslyAllowBrowser: true
  });
 
   const fetchBotReply = async (outline) => {
